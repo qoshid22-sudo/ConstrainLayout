@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#d2e0ff"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="16dp">
+
+
+
+
+            <!-- ==================== HEADER ==================== -->
+            <TextView
+                android:id="@+id/tvHeader"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Transaksi"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- ==================== KARTU SALDO ==================== -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardBalance"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="20dp"
+                app:cardBackgroundColor="#2196F3"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvHeader">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/tvSaldoLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total Saldo"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvSaldo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rp 250.000.000"
+                        android:textColor="#FFFFFF"
+                        android:textSize="28sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvSaldoLabel" />
+
+                    <TextView
+                        android:id="@+id/tvSaldoUpdate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Terakhir update: hari ini"
+                        android:textColor="#CCFFFFFF"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="#FFFFFF"
+                        android:gravity="center"
+                        android:text="💰"
+                        android:textSize="28sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- ==================== RINGKASAN PEMASUKAN & PENGELUARAN ==================== -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardIncome"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                app:layout_constraintEnd_toStartOf="@+id/cardExpense"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardBalance">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:id="@+id/tvIncomeLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pemasukan"
+                        android:textColor="#4CAF50"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvIncome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+Rp 8.200.000"
+                        android:textColor="#4CAF50"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvIncomeLabel" />
+
+                    <TextView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:background="#E8F5E9"
+                        android:gravity="center"
+                        android:text="📈"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardExpense"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/cardIncome"
+                app:layout_constraintTop_toTopOf="@+id/cardIncome">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:id="@+id/tvExpenseLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pengeluaran"
+                        android:textColor="#F44336"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvExpense"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-Rp 3.700.000"
+                        android:textColor="#F44336"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvExpenseLabel" />
+
+                    <TextView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:background="#FFEBEE"
+                        android:gravity="center"
+                        android:text="📉"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- ==================== FILTER PERIODE ==================== -->
+            <TextView
+                android:id="@+id/tvFilterLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Filter Periode"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardIncome" />
+
+            <androidx.constraintlayout.helper.widget.Flow
+                android:id="@+id/filterFlow"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:constraint_referenced_ids="btnHari,btnMinggu,btnBulan,btnTahun"
+                app:flow_horizontalGap="12dp"
+                app:flow_verticalGap="8dp"
+                app:flow_wrapMode="chain"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvFilterLabel" />
+
+            <Button
+                android:id="@+id/btnHari"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:backgroundTint="#E0E0E0"
+                android:text="Hari Ini"
+                android:textColor="#333333"
+                app:layout_constraintWidth_percent="0.22" />
+
+            <Button
+                android:id="@+id/btnMinggu"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:backgroundTint="#E0E0E0"
+                android:text="Minggu Ini"
+                android:textColor="#333333"
+                app:layout_constraintWidth_percent="0.22" />
+
+            <Button
+                android:id="@+id/btnBulan"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:backgroundTint="#2196F3"
+                android:text="Bulan Ini"
+                android:textColor="#FFFFFF"
+                app:layout_constraintWidth_percent="0.22" />
+
+            <Button
+                android:id="@+id/btnTahun"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:backgroundTint="#E0E0E0"
+                android:text="Tahun Ini"
+                android:textColor="#333333"
+                app:layout_constraintWidth_percent="0.22" />
+
+            <!-- ==================== FORM TAMBAH TRANSAKSI ==================== -->
+            <TextView
+                android:id="@+id/tvFormTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Tambah Transaksi"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/filterFlow" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilNama"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="Nama Transaksi"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvFormTitle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etNamaTransaksi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilJumlah"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="Jumlah (Rp)"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tilNama">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etJumlah"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Tipe Transaksi -->
+            <TextView
+                android:id="@+id/tvTipeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Tipe Transaksi"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tilJumlah" />
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/toggleTipe"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTipeLabel">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnTipePemasukan"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:text="Pemasukan" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnTipePengeluaran"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:text="Pengeluaran" />
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            <!-- Tombol Simpan -->
+            <Button
+                android:id="@+id/btnSimpan"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="24dp"
+                android:text="Simpan Transaksi"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toggleTipe" />
+
+            <!-- ==================== RIWAYAT TRANSAKSI ==================== -->
+            <TextView
+                android:id="@+id/tvHistoryTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Riwayat Transaksi"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnSimpan" />
+
+            <!-- Item Transaksi 1 -->
+            <View
+                android:id="@+id/divider1"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="12dp"
+                android:background="#E0E0E0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvHistoryTitle" />
+
+            <TextView
+                android:id="@+id/iconTrans1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="12dp"
+                android:background="#E8F5E9"
+                android:gravity="center"
+                android:text="+"
+                android:textColor="#4CAF50"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider1" />
+
+            <TextView
+                android:id="@+id/tvNamaTrans1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="Gaji Bulanan"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/tvJumlahTrans1"
+                app:layout_constraintStart_toEndOf="@+id/iconTrans1"
+                app:layout_constraintTop_toTopOf="@+id/iconTrans1" />
+
+            <TextView
+                android:id="@+id/tvTanggalTrans1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="15 April 2026"
+                android:textColor="#999999"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/tvNamaTrans1"
+                app:layout_constraintTop_toBottomOf="@+id/tvNamaTrans1" />
+
+            <TextView
+                android:id="@+id/tvJumlahTrans1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+Rp 8.000.000"
+                android:textColor="#4CAF50"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/iconTrans1" />
+
+            <!-- Item Transaksi 2 -->
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="12dp"
+                android:background="#E0E0E0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iconTrans1" />
+
+            <TextView
+                android:id="@+id/iconTrans2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="12dp"
+                android:background="#FFEBEE"
+                android:gravity="center"
+                android:text="-"
+                android:textColor="#F44336"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+            <TextView
+                android:id="@+id/tvNamaTrans2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="Belanja Bulanan"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/tvJumlahTrans2"
+                app:layout_constraintStart_toEndOf="@+id/iconTrans2"
+                app:layout_constraintTop_toTopOf="@+id/iconTrans2" />
+
+            <TextView
+                android:id="@+id/tvTanggalTrans2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="14 April 2026"
+                android:textColor="#999999"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/tvNamaTrans2"
+                app:layout_constraintTop_toBottomOf="@+id/tvNamaTrans2" />
+
+            <TextView
+                android:id="@+id/tvJumlahTrans2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-Rp 2.500.000"
+                android:textColor="#F44336"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/iconTrans2" />
+
+            <!-- Item Transaksi 3 -->
+            <View
+                android:id="@+id/divider3"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="12dp"
+                android:background="#E0E0E0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iconTrans2" />
+
+            <TextView
+                android:id="@+id/iconTrans3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="24dp"
+                android:background="#E8F5E9"
+                android:gravity="center"
+                android:text="+"
+                android:textColor="#4CAF50"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider3" />
+
+            <TextView
+                android:id="@+id/tvNamaTrans3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="Freelance Project"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/tvJumlahTrans3"
+                app:layout_constraintStart_toEndOf="@+id/iconTrans3"
+                app:layout_constraintTop_toTopOf="@+id/iconTrans3" />
+
+            <TextView
+                android:id="@+id/tvTanggalTrans3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="10 April 2026"
+                android:textColor="#999999"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/tvNamaTrans3"
+                app:layout_constraintTop_toBottomOf="@+id/tvNamaTrans3" />
+
+            <TextView
+                android:id="@+id/tvJumlahTrans3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+Rp 2.000.000"
+                android:textColor="#4CAF50"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/iconTrans3" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
