@@ -1,3 +1,56 @@
 <resources>
-    <string name="app_name">ConstrainLayout</string>
+    <string name="app_name">Aplikasi Transaksi</string>
+
+    <!-- Header -->
+    <string name="title_transaksi">Transaksi</string>
+
+    <!-- Kartu Saldo -->
+    <string name="label_total_saldo">Total Saldo</string>
+    <string name="value_saldo">Rp 250.000.000</string>
+    <string name="label_update_saldo">Terakhir update: hari ini</string>
+    <string name="icon_saldo">💰</string>
+
+    <!-- Ringkasan -->
+    <string name="label_pemasukan">Pemasukan</string>
+    <string name="value_pemasukan">+Rp 8.200.000</string>
+    <string name="icon_pemasukan">📈</string>
+    <string name="label_pengeluaran">Pengeluaran</string>
+    <string name="value_pengeluaran">-Rp 3.700.000</string>
+    <string name="icon_pengeluaran">📉</string>
+
+    <!-- Filter Periode -->
+    <string name="label_filter_periode">Filter Periode</string>
+    <string name="filter_hari_ini">Hari Ini</string>
+    <string name="filter_minggu_ini">Minggu Ini</string>
+    <string name="filter_bulan_ini">Bulan Ini</string>
+    <string name="filter_tahun_ini">Tahun Ini</string>
+
+    <!-- Form Tambah Transaksi -->
+    <string name="title_tambah_transaksi">Tambah Transaksi</string>
+    <string name="hint_nama_transaksi">Nama Transaksi</string>
+    <string name="hint_jumlah">Jumlah (Rp)</string>
+    <string name="label_tipe_transaksi">Tipe Transaksi</string>
+    <string name="tipe_pemasukan">Pemasukan</string>
+    <string name="tipe_pengeluaran">Pengeluaran</string>
+    <string name="button_simpan">Simpan Transaksi</string>
+
+    <!-- Riwayat Transaksi -->
+    <string name="title_riwayat_transaksi">Riwayat Transaksi</string>
+
+    <!-- Transaksi 1 -->
+    <string name="transaksi1_nama">Gaji Bulanan</string>
+    <string name="transaksi1_tanggal">15 April 2026</string>
+    <string name="transaksi1_jumlah">+Rp 8.000.000</string>
+    <string name="icon_plus">+</string>
+
+    <!-- Transaksi 2 -->
+    <string name="transaksi2_nama">Belanja Bulanan</string>
+    <string name="transaksi2_tanggal">14 April 2026</string>
+    <string name="transaksi2_jumlah">-Rp 2.500.000</string>
+    <string name="icon_minus">-</string>
+
+    <!-- Transaksi 3 -->
+    <string name="transaksi3_nama">Proyek Freelance</string>
+    <string name="transaksi3_tanggal">10 April 2026</string>
+    <string name="transaksi3_jumlah">+Rp 2.000.000</string>
 </resources>
