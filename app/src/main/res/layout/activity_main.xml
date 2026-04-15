@@ -77,11 +77,11 @@
 
                     <TextView
                         android:id="@+id/tvSaldoUpdate"
-                        android:layout_width="wrap_content"
+                        android:layout_width="wrap_content"ommit
                         android:layout_height="wrap_content"
                         android:text="@string/label_update_saldo"
                         android:textColor="#CCFFFFFF"
-                        android:textSize="10sp"
+                        android:textSize="12sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent" />
 
